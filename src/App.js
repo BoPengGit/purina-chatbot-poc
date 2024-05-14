@@ -59,7 +59,7 @@ function App() {
             --df-messenger-titlebar-background: #6a0dad; /* Darker purple for the title bar */
             --df-messenger-titlebar-font-color: #ffffff; /* Ensures text color is white for better readability */
             --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
-            --df-messenger-chat-background: #e0d4f7; /* Light purple background, now slightly darker */
+            --df-messenger-chat-background: #f4f0f9; /* Light purple background, now slightly darker */
             --df-messenger-chat-button-color: #4b0082; /* Very dark purple for chat button */
             --df-messenger-chat-icon-color: #ffffff; /* Icon color inside the chat button */
             --df-messenger-font-color: #331a4d; /* Darker text color for better contrast */

@@ -32,10 +32,9 @@ function App() {
           dangerouslySetInnerHTML={{
             __html: `
               <df-messenger
-                oauth-client-id="313705835625-774b02kb87mhr5bd6ja8chqlu0supddk.apps.googleusercontent.com"
-                location="us-central1"
-                project-id="nerdery-technology-gen-ai"
-                agent-id="6f68b946-9042-4a05-b26c-98db9074a37d"
+                oauth-client-id="86741273474-krbn0fuq96d7mv747ruip5ccr8duu0mo.apps.googleusercontent.com"
+                project-nerdery-tech-petfinder-poc"
+                agent-id="e5f9de19-b728-4b17-8f69-07b2b4c0d988"
                 language-code="en"
                 max-query-length="-1">
                 <df-messenger-chat-bubble chat-title="Purina Chatbot PoC"></df-messenger-chat-bubble>

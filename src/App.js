@@ -10,6 +10,11 @@ function App() {
     script.src = 'https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js';
     script.async = true;
     document.body.appendChild(script);
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css';
+    document.head.appendChild(link);
   }, []);
 
   return (
@@ -18,7 +23,7 @@ function App() {
         className="fullscreen-background"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'contain', // Adjust to cover/contain based on your needs
+          backgroundSize: 'cover', // Adjust to cover/contain based on your needs
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           height: '100vh',
@@ -26,14 +31,13 @@ function App() {
           position: 'absolute'
         }}
       >
-
         {/* Embed Dialogflow Messenger Widget */}
         <div
           dangerouslySetInnerHTML={{
             __html: `
               <df-messenger
-                oauth-client-id="86741273474-krbn0fuq96d7mv747ruip5ccr8duu0mo.apps.googleusercontent.com"
-                project-nerdery-tech-petfinder-poc"
+                oauth-client-id="86741273474-krbn0fuq96d7mv747ruip5ccr8duu0mo.apps.googleusercontent.com" // Replace with your OAuth client ID
+                project-id="nerdery-tech-petfinder-poc"
                 agent-id="e5f9de19-b728-4b17-8f69-07b2b4c0d988"
                 language-code="en"
                 max-query-length="-1">
@@ -42,19 +46,17 @@ function App() {
             `,
           }}
         />
-
-        {/* Add custom CSS styles */}
-        <style>
-          {`
-            df-messenger {
-              z-index: 999;
-              position: fixed;
-              bottom: 16px;
-              right: 16px;
-            }
-          `}
-        </style>
       </header>
+      <style>
+        {`
+          df-messenger {
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+          }
+        `}
+      </style>
     </div>
   );
 }

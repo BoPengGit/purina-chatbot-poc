@@ -71,16 +71,13 @@ function App() {
             bottom: 16px;
             right: 16px;
             --df-messenger-chat-border-radius: 16px; /* Rounded corners for chat window */
-            --df-messenger-chat-bubble-icon-size: 60px; // Larger size for the chat bubble icon
-            --df-messenger-chat-bubble-close-icon-size: 36px; // Larger size for the close icon
-      
 
           }
 
           df-messenger-chat-bubble {
             --df-messenger-chat-bubble-background: #6a0dad;
             --df-messenger-chat-bubble-icon-color: #ffffff;
-            --df-messenger-chat-bubble-size: 70px;
+            --df-messenger-chat-bubble-size: 60px;
             --df-messenger-chat-bubble-border-radius: 25px;
           }
         `}

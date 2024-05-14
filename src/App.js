@@ -45,7 +45,7 @@ function App() {
                 agent-id="e5f9de19-b728-4b17-8f69-07b2b4c0d988"
                 language-code="en"
                 max-query-length="-1">
-                <df-messenger-chat-bubble chat-title="Purina Chatbot PoC"></df-messenger-chat-bubble>
+                <df-messenger-chat-bubble chat-title="Petfinder Support"></df-messenger-chat-bubble>
               </df-messenger>
             `,
           }}
@@ -56,7 +56,9 @@ function App() {
         df-messenger {
           --df-messenger-bot-message: url(${petThemeBotBackground});
           --df-messenger-user-message: url(${petThemeUserBackground});
-      --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
+          --df-messenger-titlebar-background: #a56abf; /* Setting the title bar to a specific shade of purple */
+          --df-messenger-titlebar-font-color: #ffffff; /* Ensures text color is white for better readability */
+          --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
           --df-messenger-chat-background: #f4f0f9; /* Light purple background for the chat window */
           --df-messenger-chat-button-color: #855987; /* Dark purple for chat button */
           --df-messenger-chat-icon-color: #ffffff; /* Icon color inside the chat button */

@@ -1,6 +1,10 @@
 // src/App.js
 import React, { useEffect } from 'react';
 import backgroundImage from './petfinder.png'; // Adjust the image path as per your project
+// Import images
+import petThemeBotBackground from './petfinder_icon.png';
+import petThemeUserBackground from './user_icon.jpeg';
+
 import './App.css';
 
 function App() {
@@ -50,7 +54,9 @@ function App() {
       <style>
         {`
         df-messenger {
-          --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
+          --df-messenger-bot-message: url(${petThemeBotBackground});
+          --df-messenger-user-message: url(${petThemeUserBackground});
+      --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
           --df-messenger-chat-background: #f4f0f9; /* Light purple background for the chat window */
           --df-messenger-chat-button-color: #855987; /* Dark purple for chat button */
           --df-messenger-chat-icon-color: #ffffff; /* Icon color inside the chat button */

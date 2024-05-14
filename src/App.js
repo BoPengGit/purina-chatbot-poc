@@ -53,30 +53,31 @@ function App() {
       </header>
       <style>
         {`
-        df-messenger {
-          --df-messenger-bot-message: url(${petThemeBotBackground});
-          --df-messenger-user-message: url(${petThemeUserBackground});
-          --df-messenger-titlebar-background: #a56abf; /* Setting the title bar to a specific shade of purple */
-          --df-messenger-titlebar-font-color: #ffffff; /* Ensures text color is white for better readability */
-          --df-messenger-button-titlebar-color: #ffffff; /* Title bar text color */
-          --df-messenger-chat-background: #f4f0f9; /* Light purple background for the chat window */
-          --df-messenger-chat-button-color: #855987; /* Dark purple for chat button */
-          --df-messenger-chat-icon-color: #ffffff; /* Icon color inside the chat button */
-          --df-messenger-font-color: #4a2040; /* Main text color */
-          --df-messenger-primary-color: #a56abf; /* Primary theme color, applied to title bar and other elements */
-          z-index: 999;
-          position: fixed;
-          bottom: 16px;
-          right: 16px;
-        }
+          df-messenger {
+            --df-messenger-bot-message: url(${petThemeBotBackground});
+            --df-messenger-user-message: url(${petThemeUserBackground});
+            --df-messenger-titlebar-background: #a56abf;
+            --df-messenger-titlebar-font-color: #ffffff;
+            --df-messenger-button-titlebar-color: #ffffff;
+            --df-messenger-chat-background: #f4f0f9;
+            --df-messenger-chat-button-color: #855987;
+            --df-messenger-chat-icon-color: #ffffff;
+            --df-messenger-font-color: #4a2040;
+            --df-messenger-primary-color: #a56abf;
+            --df-messenger-bot-icon: url(${petThemeBotBackground});  // Add your bot icon path
+            --df-messenger-user-icon: url(${petThemeUserBackground}); // Add your user icon path
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+          }
 
-        /* Additional customizations for pet-themed elements */
-        df-messenger-chat-bubble {
-          --df-messenger-chat-bubble-background: #a56abf; /* Purple background for chat bubble */
-          --df-messenger-chat-bubble-icon-color: #ffffff; /* Chat bubble icon color */
-          --df-messenger-chat-bubble-size: 50px; /* Chat bubble size */
-          --df-messenger-chat-bubble-border-radius: 25px; /* Rounded chat bubble */
-        }
+          df-messenger-chat-bubble {
+            --df-messenger-chat-bubble-background: #a56abf;
+            --df-messenger-chat-bubble-icon-color: #ffffff;
+            --df-messenger-chat-bubble-size: 50px;
+            --df-messenger-chat-bubble-border-radius: 25px;
+          }
         `}
       </style>
     </div>

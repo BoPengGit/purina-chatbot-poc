@@ -40,7 +40,6 @@ function App() {
           dangerouslySetInnerHTML={{
             __html: `
               <df-messenger
-                oauth-client-id="86741273474-krbn0fuq96d7mv747ruip5ccr8duu0mo.apps.googleusercontent.com" // Replace with your OAuth client ID
                 project-id="nerdery-tech-petfinder-poc"
                 agent-id="e5f9de19-b728-4b17-8f69-07b2b4c0d988"
                 language-code="en"
@@ -51,6 +50,7 @@ function App() {
           }}
         />
       </header>
+      
       <style>
         {`
           df-messenger {

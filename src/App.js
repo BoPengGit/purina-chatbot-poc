@@ -1,11 +1,18 @@
 // src/App.js
 import React, { useEffect } from 'react';
-import backgroundImage from './petfinder.png'; // Adjust the image path as per your project
-// Import images
-import petThemeBotBackground from './petfinder_icon.png';
-import petThemeUserBackground from './user_icon.jpeg';
-
 import './App.css';
+
+// Import images
+import logo from './assets/petfinder-logo.png';
+import dog from './assets/dog.jpeg';
+import poweredByPurina from './assets/powered-by-purina.png';
+import caretDown from './assets/caret-down.svg';
+import hamburgerIcon from './assets/hamburger-icon.svg';
+import heartIcon from './assets/heart-icon.svg';
+import heartOutlineIcon from './assets/heart-outline-icon.svg';
+
+// fonts
+import "./fonts/Nexa/NexaRegular.otf";
 
 function App() {
   // Load the Dialogflow Messenger script after the component mounts
@@ -22,19 +29,62 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header
-        className="fullscreen-background"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: 'cover', // Adjust to cover/contain based on your needs
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          height: '100vh',
-          width: '100vw',
-          position: 'absolute'
-        }}
-      >
+    <div className="app">
+
+      <div className="dropdown">
+        <img src={poweredByPurina} className="dropdown__image" alt="Dog"/>
+        <img src={caretDown} className="dropdown__icon" alt="Caret Down"/>
+      </div>
+
+      <header className="header">
+        <div className="header__logo">
+          <img src={logo} alt="Petfinder Logo"/>
+        </div>
+        <div className="header__icons">
+          <img src={heartIcon} className="header__icon" alt="Heart Icon"/>
+          <img src={hamburgerIcon} className="header__icon" alt="Hamburger Icon"/>
+        </div>
+      </header>
+
+      <main>
+        <div className="tabs">
+          <div className="tabs__link tabs__link--active">Photos</div>
+          <div className="tabs__link">About</div>
+          <div className="tabs__link">Story</div>
+          <div className="tabs__link">How to Adopt</div>
+        </div>
+        <div className="carousel">
+          <div className="carousel__image-wrapper">
+            <img src={dog} className="carousel__image carousel__image--active" alt="Dog"/>
+            <div className="carousel__icon-wrapper">
+              <img src={heartOutlineIcon} className="carousel__icon" alt="Favorite Heart Icon" />
+            </div>
+          </div>
+          <ul className="carousel__indicator-list">
+            <li className="carousel__indicator carousel__indicator--active"></li>
+            <li className="carousel__indicator"></li>
+            <li className="carousel__indicator"></li>
+            <li className="carousel__indicator"></li>
+            <li className="carousel__indicator"></li>
+            <li className="carousel__indicator"></li>
+          </ul>
+        </div>
+        <div className="card">
+          <h1 className="card__title">Rudy</h1>
+          <h2 className="card__subtitle">
+            Puppy
+            <span>&#183;</span>
+            Male
+            <span>&#183;</span>
+            Medium
+          </h2>
+          <h3 className="card__breed">Australian Shepherd</h3>
+          <div className="card__button-container">
+            <button className="button button--primary">I'm Ready to Apply!</button>
+            <button className="button button--outline">I Have a Question</button>
+          </div>
+          <small className="card__response-time">Typically Responds in 1-2 days.</small>
+        </div>
         {/* Embed Dialogflow Messenger Widget */}
         <div
           dangerouslySetInnerHTML={{
@@ -45,44 +95,13 @@ function App() {
                 agent-id="ad63a800-fc01-49bb-a653-d29ffcaec7da"
                 language-code="en"
                 max-query-length="-1">
-                <df-messenger-chat-bubble chat-title="Petfinder Support"></df-messenger-chat-bubble>
+                <df-messenger-chat-bubble chat-title="Petfinder Support" allow-fullscreen="small"></df-messenger-chat-bubble>
               </df-messenger>
             `,
           }}
         />
-      </header>
-      
-      <style>
-        {`
-          df-messenger {
-            --df-messenger-bot-message: url(${petThemeBotBackground});
-            --df-messenger-user-message: url(${petThemeUserBackground});
-            --df-messenger-titlebar-background: #a56abf;
-            --df-messenger-titlebar-font-color: #ffffff;
-            --df-messenger-button-titlebar-color: #ffffff;
-            --df-messenger-chat-background: #f4f0f9;
-            --df-messenger-chat-button-color: #855987;
-            --df-messenger-chat-icon-color: #ffffff;
-            --df-messenger-font-color: #4a2040;
-            --df-messenger-primary-color: #a56abf;
-            --df-messenger-bot-icon: url(${petThemeBotBackground});  // Add your bot icon path
-            --df-messenger-user-icon: url(${petThemeUserBackground}); // Add your user icon path
-            z-index: 999;
-            position: fixed;
-            bottom: 16px;
-            right: 16px;
-            --df-messenger-chat-border-radius: 16px; /* Rounded corners for chat window */
+      </main>
 
-          }
-
-          df-messenger-chat-bubble {
-            --df-messenger-chat-bubble-background: #6a0dad;
-            --df-messenger-chat-bubble-icon-color: #ffffff;
-            --df-messenger-chat-bubble-size: 60px;
-            --df-messenger-chat-bubble-border-radius: 25px;
-          }
-        `}
-      </style>
     </div>
   );
 }

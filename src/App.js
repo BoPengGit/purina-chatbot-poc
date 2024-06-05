@@ -31,7 +31,8 @@ function App() {
   const openChat = () => {
     const dfMessengerBubble = document.querySelector('df-messenger-chat-bubble');
     dfMessengerBubble.openChat();
-};
+  };
+
   return (
     <div className="app">
 
@@ -111,7 +112,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

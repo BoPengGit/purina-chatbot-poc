@@ -28,6 +28,11 @@ function App() {
     document.head.appendChild(link);
   }, []);
 
+  const openChat = () => {
+    const dfMessengerBubble = document.querySelector('df-messenger-chat-bubble');
+    dfMessengerBubble.openChat();
+  };
+
   return (
     <div className="app">
 
@@ -81,7 +86,7 @@ function App() {
           <h3 className="card__breed">Australian Shepherd</h3>
           <div className="card__button-container">
             <button className="button button--primary">I'm Ready to Apply!</button>
-            <button className="button button--outline">I Have a Question</button>
+            <button onClick={openChat} className="button button--outline">I Have a Question</button>
           </div>
           <small className="card__response-time">Typically Responds in 1-2 days.</small>
         </div>
@@ -107,7 +112,3 @@ function App() {
 }
 
 export default App;
-
-
-
-

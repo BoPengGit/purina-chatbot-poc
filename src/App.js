@@ -85,7 +85,7 @@ function App() {
           </h2>
           <h3 className="card__breed">Australian Shepherd</h3>
           <div className="card__button-container">
-            <button className="button button--primary">I'm Ready to Apply!</button>
+            <a href="https://ebullymatch.com/dog-adoption/" className="button button--primary">I'm Ready to Apply!</a>
             <button onClick={openChat} className="button button--outline">I Have a Question</button>
           </div>
           <small className="card__response-time">Typically Responds in 1-2 days.</small>

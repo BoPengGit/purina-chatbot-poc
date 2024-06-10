@@ -32,24 +32,204 @@ h1 {
 }
 
 h2 {
-  font-weight: lighter;
+  font-weight: 700;
   margin-top: 0;
-  font-size: 1.25em;
+  font-size: 1.5em;
+  line-height: 32px;
 }
 
 h3 {
-  color: var(--theme-primary);
-  margin-top: 0;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
   margin-bottom: 0.5em;
+  text-transform: uppercase;
+  color: var(--theme-text-primary-dark);
 }
 
 small {
   color: var(--theme-text-primary-dark);
 }
 
+.text__primary {
+  color: var(--theme-primary);
+}
+
+hr {
+  border-color: #D2D1D3;
+  margin-bottom: 1.75em;
+}
+
 .img-resp {
   width: 100%;
   height: auto;
+}
+
+.description__wrapper {
+  margin: 1em;
+}
+
+.d__flex {
+  display: flex;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.justify__space__between {
+  justify-content: space-between;
+}
+
+.align__items__center {
+  align-items: center;
+}
+
+.flex__direction__column {
+  flex-direction: column;
+}
+
+.justify__space__around {
+  justify-content: space-around
+}
+
+.icon__text__wrapper {
+  margin: 0em 1em 1em 0em;
+  display: flex;
+  align-items: center;
+}
+
+.icon__text__wrapper img {
+  width: 24px;
+  height: 24px;
+  margin-right: .5em;
+  margin-top: -6px;
+  object-fit: cover;
+}
+
+.icon__text__wrapper p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 25px;
+}
+
+.icon__text__wrapper span {
+  font-weight: normal;
+}
+
+.divider {
+  height: 20px;
+  background-color: var(--theme-grey);
+}
+
+/* RESCUE WRAPPER */
+
+.rescue__wrapper .icon__text__wrapper img {
+  margin: 8px;
+}
+
+/* ALERT WRAPPER */
+
+.alert__wrapper {
+  display: flex;
+  align-items: flex-start;
+  line-height: 24px;
+}
+
+.alert__wrapper img {
+  margin-right: 10px;
+}
+
+/* LOCATION WRAPPER */
+
+.location__wrapper {
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.location__wrapper .pin__icon img {
+  margin: 0px 10px;
+}
+
+/* FOOD FINDER CAROUSEL */
+
+.food__finder__carousel {
+  background-color: var(--theme-grey);
+  padding: 20px;
+  text-align: center;
+}
+
+.food__finder__carousel .food__finder__card {
+  border-radius: 15px;
+  border-top: 5px solid var(--theme-primary);
+  background-color: #FFF;
+  padding: 20px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.food__finder__carousel .food__finder__card small {
+  margin-bottom: 20px;
+}
+
+.food__finder__carousel .food__finder__card .pill {
+  border-radius: 50px;
+  background-color: var(--theme-grey);
+  margin: 5px;
+  padding: 10px;
+}
+
+/* F00D FINDER CTA */
+
+.food__finder__cta {
+  background-color: #ECD7FD;
+  padding: 20px;
+  color: var(--theme-primary);
+}
+
+.food__finder__cta p {
+  margin: 15px 0px 10px;
+}
+
+/* COMPATIBILITY CARDS */
+
+.compatibility__card__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.compatibility__card {
+  position: relative;
+  border: 1px solid #D2D1D3;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+}
+
+.compatibility__card > img.indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 35px;
+  width: 35px;
+}
+
+.compatibility__card p {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.compatibility__card img {
+  height: 50px;
+  width: 50px;
 }
 
 /* BUTTONS */
@@ -81,18 +261,17 @@ small {
   cursor: pointer;
 }
 
-
-.button--primary {
+.button__primary {
   background-color: var(--theme-primary);
   color: #fff;
 }
 
-.button--outline {
+.button__outline {
   background-color: #fff;
   color: var(--theme-primary);
 }
 
-.button--outline:hover:not(:disabled) {
+.button__outline:hover:not(:disabled) {
   background-color: var(--theme-primary);
   color: #fff;
   transition-duration: 200ms;
@@ -106,7 +285,7 @@ small {
   align-items: center;
   padding: 1rem;
   background-color: var(--theme-grey);
-  height: 30px;
+  height: 50px;
 }
 
 .dropdown__image {
@@ -123,13 +302,14 @@ small {
   justify-content: space-between;
   align-items: center;
   border: 1px solid var(--theme-grey);
-  height: 60px;
+  height: 70px;
   padding: 0.5em;
   border-bottom: 2px solid var(--theme-grey);
 }
 
 .header__logo img {
-  height: 55px;
+  margin-top: 5px;
+  height: 40px;
 }
 
 .header__icons {

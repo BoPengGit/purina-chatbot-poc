@@ -324,7 +324,7 @@ function App() {
                 agent-id="ad63a800-fc01-49bb-a653-d29ffcaec7da"
                 language-code="en"
                 max-query-length="-1">
-                <df-messenger-chat-bubble chat-title="Petfinder Support" allow-fullscreen="small"></df-messenger-chat-bubble>
+                <df-messenger-chat-bubble chat-title="Rudy's Room" allow-fullscreen="small"></df-messenger-chat-bubble>
               </df-messenger>
             `,
           }}

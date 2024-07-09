@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import AffiliateLogin from './AffiliateLogin';
+import AffiliateLoginAlt from './AffiliateLoginAlt';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/affiliate-login" element={<AffiliateLogin />}></Route>
+        <Route path="/affiliate-login2" element={<AffiliateLoginAlt />}></Route>
       </Routes>
     </BrowserRouter>
   )

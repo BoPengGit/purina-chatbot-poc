@@ -30,7 +30,7 @@ const AffiliateLogin = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <Link to="/" className="button button__primary btn__w-100">Log In</Link>
-        <a href="/affiliate-login">Forgot Password?</a>
+        <a href="/affiliate-login2">Forgot Password?</a>
         <p className="line__through"><span>or log in with</span></p>
         <Link to="/" className="btn btn__facebook btn__w-100"><img src={facebookIcon} alt="facebook icon"></img><span className="text">Facebook</span></Link>
         <Link to="/" className="btn btn__google btn__w-100"><img src={googleIcon} alt="google icon"></img><span className="text">Google</span></Link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import AffiliateLogin from './AffiliateLogin';
-import AffiliateLogin_closeTab from './AffiliateLogin_closeTab';
+import AffiliateLoginRedirectHome from './AffiliateLoginRedirectHome';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/affiliate-login" element={<AffiliateLogin />}></Route>
-        <Route path="/affiliate-login2" element={<AffiliateLogin_closeTab />}></Route>
+        <Route path="/affiliate-login2" element={<AffiliateLoginRedirectHome />}></Route>
 
       </Routes>
     </BrowserRouter>

@@ -28,11 +28,11 @@ const AffiliateLoginRedirectHome = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <a href="https://purina-chatbot-poc-covlventtq-uc.a.run.app" className="button button__primary btn__w-100">Log In</a>
+        <a href="https://purina-chatbot-poc-dev-covlventtq-uc.a.run.app" className="button button__primary btn__w-100">Log In</a>
         <a href="/affiliate-login">Forgot Password?</a>
         <p className="line__through"><span>or log in with</span></p>
-        <a href="https://purina-chatbot-poc-covlventtq-uc.a.run.app" className="btn btn__facebook btn__w-100"><img src={facebookIcon} alt="facebook icon"></img><span className="text">Facebook</span></a>
-        <a href="https://purina-chatbot-poc-covlventtq-uc.a.run.app" className="btn btn__google btn__w-100"><img src={googleIcon} alt="google icon"></img><span className="text">Google</span></a>
+        <a href="https://purina-chatbot-poc-dev-covlventtq-uc.a.run.app" className="btn btn__facebook btn__w-100"><img src={facebookIcon} alt="facebook icon"></img><span className="text">Facebook</span></a>
+        <a href="https://purina-chatbot-poc-dev-covlventtq-uc.a.run.app" className="btn btn__google btn__w-100"><img src={googleIcon} alt="google icon"></img><span className="text">Google</span></a>
       </div>
     </div>
   );
